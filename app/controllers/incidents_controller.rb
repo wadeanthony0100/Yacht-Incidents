@@ -3,7 +3,10 @@ class IncidentsController < ApplicationController
   # GET /incidents.json
   def index
     @incidents = Incident.all
-    @last_time = Incident.last_incident().created_at
+    @last_time = Incident.last_incident()
+    if @last_time
+      @last_time = @last_time.created_at
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @incidents }
