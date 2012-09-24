@@ -2,7 +2,7 @@ class IncidentsController < ApplicationController
   # GET /incidents
   # GET /incidents.json
   def index
-    @incidents = Incident.all
+    @incidents = Incident.order("created_at DESC").all
     @last_time = Incident.last_incident()
     if @last_time
       @last_time = @last_time.created_at
