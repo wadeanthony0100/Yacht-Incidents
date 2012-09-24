@@ -18,7 +18,11 @@ class IncidentsController < ApplicationController
   # GET /incidents/1
   # GET /incidents/1.json
   def show
-    @incident = Incident.find(params[:id])
+    if params[:id] == "last"
+      @incident = Incident.last_incident()
+    else
+      @incident = Incident.find(params[:id])
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -39,7 +43,11 @@ class IncidentsController < ApplicationController
 
   # GET /incidents/1/edit
   def edit
-    @incident = Incident.find(params[:id])
+    if params[:id] == "last"
+      @incident = Incident.last_incident()
+    else
+      @incident = Incident.find(params[:id])
+    end
   end
 
   # POST /incidents
