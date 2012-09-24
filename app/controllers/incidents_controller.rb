@@ -5,6 +5,7 @@ class IncidentsController < ApplicationController
   def index
     @incidents = Incident.order("created_at DESC").all
     @last_time = Incident.last_incident()
+    @timezone = ActiveSupport::TimeZone["Eastern Time (US & Canada)"]
     if @last_time
       @last_time = @last_time.created_at
     end

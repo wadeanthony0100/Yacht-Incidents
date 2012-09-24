@@ -12,8 +12,8 @@
   - @incidents.each do |incident|
     %article
       %time
-        %span.time= incident.created_at.strftime("%I:%M%p")
-        %span.date= incident.created_at.strftime("%A %d, %Y")
+        %span.time= @timezone.at(incident.created_at).strftime("%I:%M%p")
+        %span.date= @timezone.at(incident.created_at).strftime("%A %d, %Y")
       .content  
         %p.description= incident.body
         - if !incident.name.blank?
