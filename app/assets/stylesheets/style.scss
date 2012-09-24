@@ -16,7 +16,7 @@ body {
 
 
 .counter {
-    margin: 2em 0;
+    margin: 1.8em 0;
     text-align: center;
     font-size: 5em;
     line-height: 1.3em;
@@ -79,4 +79,32 @@ body {
 
 p {
     margin: 0; padding: 0;
+}
+
+.report {
+    margin: 0 0 4em;
+    display: block;
+    text-align: center;
+
+    a {
+        padding: 0.5em;
+        text-decoration: none;
+        color: #222;
+        border: 2px solid #222;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3em;
+
+        transition: 300ms all;
+        -webkit-transition: 300ms all;
+        -moz-transition: 300ms all;
+        -o-transition: 300ms all;
+        -khtml-transition: 300ms all;
+
+        &:hover {
+            color: #f0f0f0;
+            background: #222;
+        }
+    }
 }

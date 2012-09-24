@@ -3,6 +3,10 @@
   %span.count= distance_of_time_in_words_to_now( @last_time )
   without a yacht incident
 
+
+.report
+  =link_to "Report an incident", controller: "incidents", action: "new"
+
 .incidents
 
   - @incidents.each do |incident|
@@ -12,7 +16,7 @@
         %span.date= incident.created_at.strftime("%A %d, %Y")
       .content  
         %p.description= incident.body
-        - if incident.name
+        - if !incident.name.blank?
           %p.offender 
             %b Offender
             = incident.name
