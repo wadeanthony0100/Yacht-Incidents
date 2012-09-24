@@ -15,3 +15,7 @@
 tr{
 	border-color:black;
 }
+
+.clear{
+	clear: both;
+}

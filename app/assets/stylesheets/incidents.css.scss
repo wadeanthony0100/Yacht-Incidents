@@ -45,3 +45,32 @@ body{
 	float:right;
 	padding-top:20px;
 }
+
+
+a {
+
+    padding: 0.5em;
+    text-decoration: none;
+    color: #222;
+    border: 2px solid #222;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+
+    transition: 300ms all;
+    -webkit-transition: 300ms all;
+    -moz-transition: 300ms all;
+    -o-transition: 300ms all;
+    -khtml-transition: 300ms all;
+
+    &:hover {
+        color: #f0f0f0;
+        background: #222;
+    }
+
+}
+
+.home_link{
+	padding-top:30px;
+}
