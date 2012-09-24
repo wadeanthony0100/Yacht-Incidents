@@ -1,0 +1,20 @@
+= form_for(@incident) do |f|
+	.incident_report
+		.incident_header
+			.incident_header_inner
+				YACHT INCIDENT REPORT
+		.incident_field
+			.incident_field_inner
+				.incident_title
+					1. OFFENDER
+				= f.text_field :name
+		.incident_field
+			.incident_field_inner
+				.incident_title
+					2. BRIEF DESCRIPTION OF THE INCIDENT
+				= f.text_area :body
+		.incident_field
+			.incident_field_inner
+				FILE THIS REPORT WITH THE DEPARTMENT OF YACHT INCIDENTS FOUND IN (GOL)-1670
+		.incident_submit
+			= f.submit "SUBMIT REPORT"
