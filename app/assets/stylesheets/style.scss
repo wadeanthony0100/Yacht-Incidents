@@ -1,0 +1,82 @@
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background: #f0f0f0;
+    color: #222;
+}
+
+
+.counter {
+    margin: 2em 0;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.3em;
+
+    .count {
+        display: block;
+        color: #c00;
+
+        $shadow: #700;
+        text-shadow: 1px 1px 2px $shadow;
+        -webkit-text-shadow: 1px 1px 2px $shadow;
+        -moz-text-shadow: 1px 1px 2px $shadow;
+        -o-text-shadow: 1px 1px 2px $shadow;
+        -khtml-text-shadow: 1px 1px 2px $shadow;
+    }
+}
+
+.incidents {
+    margin: 0 auto;
+    max-width: 600px;
+
+    article {
+        @extend .clearfix;
+        line-height: 1.4em;
+        margin-bottom: 1.4em;
+
+        time {
+            width: 30%;
+            display: block;
+            float: left;
+
+            .time {
+                padding-top: 0.1em;
+                display: block;
+                font-size: 2em;
+            }
+        }
+
+        .content {
+            width: 69%;
+            float: left;
+            clear: right;
+        }
+    }
+}
+
+.description {
+    background: #555;
+    padding: 0.5em;
+    color: #e7e7e7;
+}
+
+.offender {
+    font-size: 0.8em;
+}
+
+.offender b::after {
+    content: ":";
+}
+
+p {
+    margin: 0; padding: 0;
+}
