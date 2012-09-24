@@ -1,4 +1,5 @@
 class IncidentsController < ApplicationController
+  http_basic_authenticate_with :name => "yacht", :password => "imonaboat", :except => [:index, :show, :new, :create]
   # GET /incidents
   # GET /incidents.json
   def index
