@@ -1,5 +1,7 @@
 YachtIncident::Application.routes.draw do
-  resources :incidents
+  resources :incidents do
+    get 'all'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

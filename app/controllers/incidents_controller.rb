@@ -93,4 +93,8 @@ class IncidentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def all
+    @incidents = Incident.all
+  end
 end
