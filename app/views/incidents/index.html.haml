@@ -1,6 +1,6 @@
 .counter
   The SSE has gone
-  %span.count= distance_of_time_in_words_to_now( @last_time )
+  %span.count= distance_of_time_in_words_to_now( @last_time ) rescue "since the beginning of time"
   without a yacht incident
 
 
