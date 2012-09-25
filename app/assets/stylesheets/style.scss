@@ -94,12 +94,15 @@ p {
 }
 
 .report {
-    margin: 0 0 4em;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    max-width: 600px;
     display: block;
-    text-align: center;
+    
 
     a {
         padding: 0.5em;
+        margin-left: 180px;
         text-decoration: none;
         color: #222;
         border: 2px solid #222;
