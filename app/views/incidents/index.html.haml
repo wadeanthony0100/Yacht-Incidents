@@ -13,7 +13,7 @@
     %article
       %time
         %span.time= @timezone.at(incident.created_at).strftime("%I:%M%p")
-        %span.date= @timezone.at(incident.created_at).strftime("%A %d, %Y")
+        %span.date= @timezone.at(incident.created_at).strftime("%b %d, %Y")
       .content  
         %p.description= incident.body
         - if !incident.name.blank?
